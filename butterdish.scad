@@ -8,6 +8,7 @@ outerLipHeight = 0.4;
 borderWidth = 1.3;
 tickWidth = 0.1;
 tickHeight = 0.1;
+tickMargin = 0.2;
 
 
 // derived values
@@ -18,9 +19,10 @@ lipOuterLength = lipInnerLength + (2 * lipThickness);
 lipOuterHeight = lipInnerHeight + lipThickness;
 borderOuterWidth = lipOuterWidth + (2 * borderWidth);
 borderOuterLength = lipOuterLength + (2 * borderWidth);
-echo("Max dimensions are ", borderOuterWidth, " by ", borderOuterLength);
 baseHeight = (lipOuterHeight - outerLipHeight);
 borderRadius = baseHeight - lipThickness;
+
+echo("Max dimensions are ", borderOuterWidth, " by ", borderOuterLength);
 
 difference() {
     union() {
@@ -58,7 +60,7 @@ difference() {
 
 module tick(x, tickLength) {
     xpos = (lipInnerWidth * (0.5 - x));
-    translate([xpos - (tickWidth/2), (lipOuterLength / 2) + 0.2, baseHeight - (lipOuterHeight/2)]) {
+    translate([xpos - (tickWidth/2), (lipOuterLength / 2) + tickMargin, baseHeight - (lipOuterHeight/2)]) {
         cube([tickWidth, tickLength, tickHeight], false);
     }
 }
@@ -81,7 +83,7 @@ tick(15/16, 0.4);
 
 module tick2(x, tickLength) {
     xpos = (lipInnerWidth * (x - 0.5));
-    translate([xpos - (tickWidth/2), -(lipOuterLength / 2) - tickLength - 0.2, baseHeight - (lipOuterHeight/2)]) {
+    translate([xpos - (tickWidth/2), -(lipOuterLength / 2) - tickLength - tickMargin, baseHeight - (lipOuterHeight/2)]) {
         cube([tickWidth, tickLength, tickHeight], false);
     }
 }
