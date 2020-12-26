@@ -1,14 +1,14 @@
-// in centimeters
-brickWidth = 11.8;
-brickLength = 6.5;
-wiggleRoom = 0.4;
-lipThickness = 0.2;
-lipInnerHeight = 1.3;
-outerLipHeight = 0.4;
-borderWidth = 1.3;
-tickWidth = 0.1;
-tickHeight = 0.2;
-tickMargin = 0.2;
+// in millimeters
+brickWidth = 118;
+brickLength = 65;
+wiggleRoom = 4;
+lipThickness = 2;
+lipInnerHeight = 13;
+outerLipHeight = 4;
+borderWidth = 13;
+tickWidth = 1;
+tickHeight = 2;
+tickMargin = 2;
 
 
 // derived values
@@ -22,7 +22,7 @@ borderOuterLength = lipOuterLength + (2 * borderWidth);
 baseHeight = (lipOuterHeight - outerLipHeight);
 borderRadius = baseHeight - lipThickness;
 
-echo("Max dimensions are ", borderOuterWidth, " by ", borderOuterLength);
+echo("Max dimensions are (mm) ", borderOuterWidth, " by ", borderOuterLength);
 
 difference() {
     union() {
@@ -65,21 +65,21 @@ module tick(x, tickLength) {
     }
 }
 
-tick(1/16, 0.4);
-tick(2/16, 0.6);
-tick(3/16, 0.4);
-tick(4/16, 0.8);
-tick(5/16, 0.4);
-tick(6/16, 0.6);
-tick(7/16, 0.4);
-tick(8/16, 1);
-tick(9/16, 0.4);
-tick(10/16, 0.6);
-tick(11/16, 0.4);
-tick(12/16, 0.8);
-tick(13/16, 0.4);
-tick(14/16, 0.6);
-tick(15/16, 0.4);
+tick(1/16, 4);
+tick(2/16, 6);
+tick(3/16, 4);
+tick(4/16, 8);
+tick(5/16, 4);
+tick(6/16, 6);
+tick(7/16, 4);
+tick(8/16, 10);
+tick(9/16, 4);
+tick(10/16, 6);
+tick(11/16, 4);
+tick(12/16, 8);
+tick(13/16, 4);
+tick(14/16, 6);
+tick(15/16, 4);
 
 module tick2(x, tickLength) {
     xpos = (lipInnerWidth * (x - 0.5));
@@ -88,8 +88,8 @@ module tick2(x, tickLength) {
     }
 }
 
-tick2(1/6, 0.6);
-tick2(2/6, 0.8);
-tick2(3/6, 0.6);
-tick2(4/6, 0.8);
-tick2(5/6, 0.6);
+tick2(1/6, 6);
+tick2(2/6, 8);
+tick2(3/6, 6);
+tick2(4/6, 8);
+tick2(5/6, 6);

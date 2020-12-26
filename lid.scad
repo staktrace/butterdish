@@ -1,14 +1,14 @@
-// in centimeters
-brickWidth = 11.8;
-brickLength = 6.5;
-wiggleRoom = 0.4;
-lipThickness = 0.2;
-lipInnerHeight = 1.3;
-outerLipHeight = 0.4;
-borderWidth = 1.3;
-tickWidth = 0.1;
-tickHeight = 0.1;
-tickMargin = 0.2;
+// in millimeters
+brickWidth = 118;
+brickLength = 65;
+wiggleRoom = 4;
+lipThickness = 2;
+lipInnerHeight = 13;
+outerLipHeight = 4;
+borderWidth = 13;
+tickWidth = 1;
+tickHeight = 2;
+tickMargin = 2;
 
 
 // derived values
