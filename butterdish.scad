@@ -7,7 +7,7 @@ lipInnerHeight = 1.3;
 outerLipHeight = 0.4;
 borderWidth = 1.3;
 tickWidth = 0.1;
-tickHeight = 0.1;
+tickHeight = 0.2;
 tickMargin = 0.2;
 
 
